@@ -16,8 +16,11 @@ export default function Home() {
   const  handleStart =  async (e) => {
     e.preventDefault()
     setIsOpen(false)
-    localStorage.setItem("name", name);
-    router.push('/fake-detector/tutorial')
+    if (name !== '') {
+      localStorage.setItem("name", name);
+      router.push('/fake-detector/tutorial')
+    }
+    
  
   }
 

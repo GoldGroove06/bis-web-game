@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 export default function NavBar() {
 
@@ -9,11 +10,11 @@ export default function NavBar() {
         className="text-2xl font-bold cursor-pointer hover:underline transition-colors duration-300" 
         
      >
-        BIS game
+       <Link href="/">BIS game</Link> 
       </h1>
 
       <h2>
-        Current Leader : Name of leader
+       <Link href="/leaderboard"> Current Leader : Name of leader </Link>
       </h2>
       </div>
 
