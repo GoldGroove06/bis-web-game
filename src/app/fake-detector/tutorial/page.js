@@ -40,7 +40,7 @@ function Tutorial1() {
 
     <div>
         
-        <Tutorial tutData={tutData} redirect="/fake-detector/game" isOpen={isOpen} setIsOpen={open}/>
+        <Tutorial tutData={tutData} redirect="/fake-detector/game" />
     
       
     </div>

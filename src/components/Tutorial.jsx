@@ -33,18 +33,18 @@ function Tutorial({tutData, redirect,isOpen,setIsOpen}) {
                 imgsrc={tutData[track].img}
               />
               {track !== 0  ?
-              <IconButton radius="full">
-                  <Button onClick={handlePrev} >
+              <IconButton radius="full" onClick={handlePrev}>
+                  
                       <ArrowLeftIcon />
-                  </Button>
+               
               </IconButton> : ""
                   }       
               
               {track !== tutData.length - 1  ? 
-              <IconButton radius="full">
-                  <Button onClick={handleNext}>
+              <IconButton radius="full" onClick={handleNext}>
+                
                       <ArrowRightIcon />
-                  </Button>
+                
               </IconButton> :
                   <Link href={redirect}>
                   <Button> Tutorial Complete </Button>
