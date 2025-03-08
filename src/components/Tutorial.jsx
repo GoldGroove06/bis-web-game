@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import React from "react";
 import Link from "next/link";
@@ -5,7 +6,7 @@ import TutorialCard from "@/components/TutorialCard";
 import { Dialog, Button, IconButton } from "@radix-ui/themes";
 import { ArrowRightIcon, ArrowLeftIcon } from "@radix-ui/react-icons";
 
-function Tutorial({tutData, redirect,isOpen,setIsOpen}) {
+function Tutorial({tutData, redirect}) {
     const [ track, setTrack ] = useState(0)
 
     const handlePrev = () => {
@@ -27,6 +28,9 @@ function Tutorial({tutData, redirect,isOpen,setIsOpen}) {
   
             <Dialog.Content maxWidth="450px">
               <Dialog.Title>Tutorial</Dialog.Title>
+              <Dialog.Description size="2" mb="4">
+              {tutData[track].desc}
+              </Dialog.Description>
               
               <TutorialCard
                 content={tutData[track].content}

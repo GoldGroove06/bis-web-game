@@ -1,10 +1,10 @@
 "use client"
-import React from 'react';
+import React, { useState, useEffect} from 'react';
 import { useRouter } from 'next/navigation'
 
 function Game() {
     const router = useRouter() 
-
+    const [score, setScore] = useState(0)
     const handlefinish = () => {
 
         // send data to backend
@@ -14,10 +14,15 @@ function Game() {
         
 
     }
+
+    useEffect(() => {
+        const storedScore = localStorage.getItem("score");
+        if (storedScore) setScore(storedScore);
+      }, []);
     return (
         <div>
             Quiz game
-
+            {score}
             <button onClick={handlefinish} >finish game</button>
         </div>
     );
