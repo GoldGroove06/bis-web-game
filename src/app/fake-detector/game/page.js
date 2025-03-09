@@ -85,8 +85,27 @@ function Game1() {
   };
   console.log(track, gameData.length - 1);
   return (
-    <div>
-      Fake detector game Current Score: {score}
+    <div className="absolute z-30 w-[64rem] bg-white/10 backdrop-blur-lg border-b border-white/10 !p-6 text-green-300 text-xl font-semibold rounded-lg shadow-lg">
+      
+      {/* Game Introduction Section */}
+      <div className="text-center mb-6">
+        <h2 className="text-green-300 text-4xl font-extrabold mb-4">🕵️‍♂️ Time to Put Your Skills to the Test!</h2>
+        <p className="text-white text-lg px-6 leading-relaxed">
+          You have learned how to spot fake products—now it's time to **prove your expertise**!  
+          Carefully analyze the images and **select the real product**.  
+        </p>
+        <p className="text-white text-lg px-6 mt-2 leading-relaxed">
+          Make the right choice and earn points. But be careful—fake products can be tricky! 🛑  
+        </p>
+      </div>
+  
+      {/* Score Display */}
+      <div className="bg-green-900/20 p-4 rounded-lg border-l-4 border-green-500 shadow-md text-center mb-4">
+        <h3 className="text-green-400 text-2xl font-semibold">🎯 Fake Detector Game</h3>
+        <p className="text-white text-xl mt-1">Current Score: {score}</p>
+      </div>
+  
+      {/* Game Cards */}
       <FakegameCards
         data={gameData[track]}
         color={color}
@@ -95,21 +114,24 @@ function Game1() {
         radioRef={radioRef}
         key={key}
       />
-      {nextBtn ? track == gameData.length - 1 ? (
-        <GameScore
-          score={score}
-          redirect={"/quiz/tutorial"}
-          btnText={"Next Game"}
-        />
-      ) : (
-        <IconButton radius="full" onClick={handleNext}>
-          <ArrowRightIcon />
-        </IconButton> 
-      )
-      : ""
-    }
+  
+      {/* Next Button or Game Score Display */}
+      {nextBtn &&
+        (track === gameData.length - 1 ? (
+          <div className="flex justify-center mt-6 ">
+            <GameScore score={score} redirect={"/quiz/tutorial"} btnText={"Next Game"}  />
+          </div>
+        ) : (
+          <div className="flex justify-center mt-6">
+            <IconButton radius="full" onClick={handleNext} className="bg-green-600 hover:bg-green-700 text-white p-3">
+              <ArrowRightIcon size={24} />
+            </IconButton>
+          </div>
+        ))
+      }
     </div>
   );
+  
 }
 
 export default Game1;

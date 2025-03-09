@@ -23,12 +23,12 @@ function Tutorial({tutData, redirect}) {
         <div>
           <Dialog.Root >
             <Dialog.Trigger>
-              <Button>Start Tutorial</Button>
+              <Button >Start Tutorial</Button>
             </Dialog.Trigger>
   
-            <Dialog.Content maxWidth="450px">
-              <Dialog.Title>Tutorial</Dialog.Title>
-              <Dialog.Description size="2" mb="4">
+            <Dialog.Content maxWidth="550px" className="!bg-zinc-900">
+              <Dialog.Title className="text-green-400">Tutorial</Dialog.Title>
+              <Dialog.Description size="2" mb="4" className="text-white">
               {tutData[track].desc}
               </Dialog.Description>
               
@@ -51,7 +51,7 @@ function Tutorial({tutData, redirect}) {
                 
               </IconButton> :
                   <Link href={redirect}>
-                  <Button> Tutorial Complete </Button>
+                  <Button color="green"> Tutorial Complete </Button>
                 </Link>
               }
               

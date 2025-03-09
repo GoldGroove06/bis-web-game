@@ -27,42 +27,53 @@ export default function Home() {
   
 
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        Homepage with content related to the BIS
+  
+
+
+      
+      <main className="" id="box-start">
+      
+        
         <Dialog.Root open={isOpen} onOpenChange={(isOpen) => setIsOpen(isOpen)}>
           <Dialog.Trigger>
-            <Button>Start Game</Button>
+            <Button class="text-green-400 text-3xl">Start Game</Button>
           </Dialog.Trigger>
 
-          <Dialog.Content maxWidth="450px">
-            <Dialog.Title>Add Name</Dialog.Title>
-            <Dialog.Description size="2" mb="4">
+            <div >
+          <Dialog.Content maxWidth="450px" id="content" className=" !bg-white/1 backdrop-blur-lg border-b border-white/10">
+            <Dialog.Title className="text-[var(--green-6)] " mb="4">Enter your Name to start the Game</Dialog.Title>
+            {/* <Dialog.Description size="2" mb="4">
               Enter your Name to start the Game
-            </Dialog.Description>
+            </Dialog.Description> */}
+            <div id="form">
 
             <Flex direction="column" gap="3">
-              <label>
-                Name: <input name="name" type="text" value={name} onChange={(e) => setName(e.target.value)}/>
+              <label className="text-[var(--green-6)]">
+                Name: <input name="name" id="inputBox" type="text" value={name} onChange={(e) => setName(e.target.value)}/>
               </label>
             </Flex>
 
             <Flex gap="3" mt="4" justify="end">
               <Dialog.Close>
-                <Button variant="soft" color="gray">
+                <Button variant="soft" color="green" > 
                   Cancel
                 </Button>
               </Dialog.Close>
               
-                <Button onClick={handleStart}>Start</Button>
+                <Button onClick={handleStart} color="green">Start</Button>
              
             </Flex>
+            </div>
           </Dialog.Content>
+          </div>
         </Dialog.Root>
         {/* <Link href={"/fake-detector/tutorial"}>
           <button> Start Game </button>
         </Link> */}
+       
       </main>
-    </div>
+    
+  
+   
   );
 }

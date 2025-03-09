@@ -95,10 +95,26 @@ function Game() {
     localStorage.setItem("score", score);
   }, [score]);
   return (
-    <div>
-      Quiz game The Quiz Challenge is an interactive game where users answer
-      multiple-choice questions (MCQs) to test their knowledge about consumer
-      rights, BIS standards, and product safety. Current Score {score}
+    <div className="z-30 absolute bg-white/10 backdrop-blur-lg border-b border-white/10 text-green-300 !p-6 rounded-lg shadow-lg w-[64rem]">
+      
+      {/* Quiz Introduction */}
+      <div className="text-center !mb-6">
+        <h2 className="text-green-300 text-4xl font-extrabold mb-4">🧠 The Quiz Challenge</h2>
+        <p className="text-white text-lg leading-relaxed">
+          Welcome to the ultimate test of knowledge! Answer **multiple-choice questions (MCQs)** to assess your understanding of **consumer rights, BIS standards, and product safety.**  
+        </p>
+        <p className="text-white text-lg mt-2 leading-relaxed">
+          Every correct answer gets you closer to victory—think wisely!  
+        </p>
+      
+  
+      {/* Score Display */}
+      <div className=" p-4 rounded-lg border-l-4 border-green-500 shadow-md text-center mb-4">
+        <h3 className="text-green-400 text-2xl font-semibold">🎯 Current Score: {score}</h3>
+      </div>
+      </div>
+  
+      {/* Quiz Cards */}
       <QuizCards
         data={gameData[track]}
         color={color}
@@ -107,19 +123,26 @@ function Game() {
         radioRef={radioRef}
         key={key}
       />
-      {nextBtn ? (
-        track == gameData.length - 1 ? (
-          <Button onClick={handlefinish}>finish game</Button>
-        ) : (
-          <IconButton radius="full" onClick={handleNext}>
-            <ArrowRightIcon />
-          </IconButton>
-        )
-      ) : (
-        ""
-      )}
+  
+      {/* Navigation Buttons */}
+      <div className="flex justify-center mt-6">
+        {nextBtn &&
+          (track === gameData.length - 1 ? (
+            <Button 
+              onClick={handlefinish} 
+              className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-semibold shadow-md transition">
+              Finish Game
+            </Button>
+          ) : (
+            <IconButton radius="full" onClick={handleNext} className="bg-green-600 hover:bg-green-700 text-white p-3">
+              <ArrowRightIcon size={24} />
+            </IconButton>
+          ))
+        }
+      </div>
     </div>
   );
+  
 }
 
 export default Game;
