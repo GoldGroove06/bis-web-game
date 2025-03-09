@@ -18,21 +18,22 @@ function Tutorial2() {
 
       const tutData = [
         {
-          content: "1.Why Consumer Awareness Matters? Every day, millions of consumers fall victim to fake products, misleading ads, and unfair trade practices. Knowing your rights can help you stay safe!",
+          content: `1. Why Consumer Awareness Matters?\n\nEvery day, millions of consumers fall victim to fake products,\n\n misleading ads, and unfair trade practices.\n\n Knowing your rights can help you stay safe!`,
           img: tut,
         },
         {
-          content: "2.How to spot fake products,What to do if you get scammed How to use consumer rights to your advantage",
+          content: `2. How to Spot Fake Products?\n\n- What to do if you get scammed\n- How to use consumer rights to your advantage`,
           img: tut,
         },
         {
-          content: "3. What to Do If You Get Scammed? If you receive a fake or defective product: 1️⃣ Ask for a refund or replacement from the seller 2️⃣ File a complaint on the National Consumer Helpline (NCH) website 3️⃣ Report counterfeit products to BIS / FSSAI / relevant authorities 4️⃣ Spread awareness to help others avoid scams",
+          content: `3. What to Do If You Get Scammed?\n\nIf you receive a fake or defective product:\n\n1️⃣ Ask for a refund or replacement from the seller\n2️⃣ File a complaint on the National Consumer Helpline (NCH) website\n3️⃣ Report counterfeit products to BIS / FSSAI / relevant authorities\n4️⃣ Spread awareness to help others avoid scams`,
           img: tut,
         },
         {
-          content: "4.Before buying any product, always check for: ✅ ISI, Hallmark, or FSSAI Certification ✅ Correct Brand Name & Packaging ✅ Authorized Seller & Warranty ✅ Fair Market Pricing (Beware of Unrealistic Discounts!)",
+          content: `4. Before Buying Any Product, Always Check:\n\n✅ ISI, Hallmark, or FSSAI Certification\n✅ Correct Brand Name & Packaging\n✅ Authorized Seller & Warranty\n✅ Fair Market Pricing (Beware of Unrealistic Discounts!)`,
           img: tut,
         },
+        
       ];
       
       return (
@@ -53,7 +54,7 @@ function Tutorial2() {
       
           <Tutorial tutData={tutData} redirect="/quiz/game" />
       
-          <p className="text-white text-lg mt-4">{name}</p>
+          {/* <p className="text-white text-lg mt-4">{name}</p> */}
       
           {/* <Link href={"/fake-detector/game"}>
             <button className="">

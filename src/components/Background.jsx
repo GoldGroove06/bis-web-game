@@ -2,7 +2,7 @@ import React from 'react';
 
 function Background({children}) {
     return (
-        <section>
+        <section >
     
     <span></span>
     <span></span>

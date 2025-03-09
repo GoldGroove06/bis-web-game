@@ -33,6 +33,7 @@ function Tutorial({tutData, redirect}) {
               </Dialog.Description>
               
               <TutorialCard
+              
                 content={tutData[track].content}
                 imgsrc={tutData[track].img}
               />

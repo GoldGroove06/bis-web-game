@@ -13,25 +13,25 @@ function Tutorial1() {
   const tutData = [
     {
       desc: "1️. BIS Certification Marks (ISI, Hallmark, FSSAI, etc.)",
-      content: "✅ Real: Has an authentic ISI, Hallmark, or FSSAI logo with proper details ❌ Fake No certification mark OR a poorly printed / fake logo",
+      content: `✅ Real: Has an authentic ISI, Hallmark, or FSSAI logo with proper details.\n❌ Fake: No certification mark OR a poorly printed / fake logo.`,
       img: tut,
-
     },
     { 
       desc: "2. Product Labels & Packaging Details",
-      content: "✅ Real:• Proper branding, correct spelling, and consistent fonts.• A barcode/QR code that links to official product info.❌ Fake:• Spelling mistakes (e.g., \"Adibas\" instead of \"Adidas\").\n• Poor-quality printing or wrong colors.\n• No barcode or a fake QR code.",
+      content: `✅ Real:\n• Proper branding, correct spelling, and consistent fonts.\n• A barcode/QR code that links to official product info.\n\n❌ Fake:\n• Spelling mistakes (e.g., "Adibas" instead of "Adidas").\n• Poor-quality printing or wrong colors.\n• No barcode or a fake QR code.`,
       img: tut,
     },
     {
       desc: "3. Price & Seller Details",
-      content: "✅ Real:• Sold by authorized dealers.• Price is consistent with the brand's official rates.❌ Fake:• Too cheap compared to the actual market price.\n• No valid invoice or seller details.",
+      content: `✅ Real:\n• Sold by authorized dealers.\n• Price is consistent with the brand's official rates.\n\n❌ Fake:\n• Too cheap compared to the actual market price.\n• No valid invoice or seller details.`,
       img: tut,
     },
     {
-      "desc": "4. Build Quality & Material Differences",
-  "content": "✅ Real:• Uses high-quality material.• Proper weight, texture, and durability.❌ Fake:• Cheap plastic instead of metal, improper stitching, weak construction.• Feels too lightweight or poorly assembled.",
+      desc: "4. Build Quality & Material Differences",
+      content: `✅ Real:\n• Uses high-quality material.\n• Proper weight, texture, and durability.\n\n❌ Fake:\n• Cheap plastic instead of metal, improper stitching, weak construction.\n• Feels too lightweight or poorly assembled.`,
       img: tut,
     },
+    
   ];
 
   useEffect(() => {

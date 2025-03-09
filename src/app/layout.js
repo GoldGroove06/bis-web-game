@@ -26,9 +26,10 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Theme accentColor="green" >
-          <Background >
+        <Theme accentColor="green" className="w-screen" >
+        
           <Navbar/>
+          <Background >
           {children}
         </Background>
         </Theme>

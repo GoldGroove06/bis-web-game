@@ -9,7 +9,7 @@ function TutorialCard({content, imgsrc}) {
             src={imgsrc}
             alt="img"
             />
-            {content}
+            <pre>{content}</pre>
 	</Card>
     );
 }
