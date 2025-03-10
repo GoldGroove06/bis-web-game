@@ -46,8 +46,10 @@ function Leaderboard() {
             className="bg-white/5 p-3 my-2 rounded-lg shadow-md"
           />
         ))}
-      </div>
+      </div>  
+
     </div>
+    
   );
   
 }

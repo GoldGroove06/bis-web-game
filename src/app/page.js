@@ -29,32 +29,38 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center justify-center text-center !p-6 bg-white/10 z-30 absolute space-y-4 rounded-xl">
       {/* Game Introduction */}
-      <div className=" shadow-lg p-8 rounded-2xl max-w-4xl text-green-400 mb-10">
-        <h1 className="text-4xl font-extrabold mb-4">🕵️‍♂️ Fake Detector Challenge!!</h1>
-        <div className="text-lg leading-relaxed  !p-2 text-green-300">
-          Are you ready to test your skills? <br/>
-          This game will challenge your eye for detail and knowledge about<div className="text-2xl"> REAL vs. FAKE products.</div>
-        </div>
-        <p className="mt-4 text-lg text-green-300">
-          {/* <p>🎯 Drag & Drop Challenge – Spot the authentic product!</p>
-          <p>🧠 Quiz Battle – Answer MCQs on consumer rights and safety!</p>   */}
-          🏆 Leaderboard Glory – Climb the ranks and prove your expertise!<br/>
-        </p>
-        <p className="mt-4 font-semibold text-green-300">Stay sharp, trust your instincts, and let us begin! 🚀</p>
-      </div>
+      <div className="shadow-lg p-8 rounded-2xl max-w-4xl text-green-400 mb-10">
+  <h1 className="text-4xl font-extrabold mb-4">🏛️ Bureau of Indian Standards</h1>
+  <div className="text-lg leading-relaxed !p-2 text-green-300">
+    The Bureau of Indian Standards (BIS) is the National Standards Body of India, ensuring  
+    quality, safety, and reliability across products and services. Established under the Ministry of Consumer Affairs,  
+    BIS sets benchmarks for consumer protection, industrial growth, and global trade standards**.
+  </div>
+  
+  <p className="mt-4 font-semibold text-green-300">
+    Be an informed consumer—Trust the Standard, Choose BIS!
+  </p>
+</div>
+      
 
       {/* Start Game Button & Name Input Modal */}
       <Dialog.Root open={isOpen} onOpenChange={setIsOpen}>
         <Dialog.Trigger>
-          <Button className="!text-green-200 !text-3xl !p-2 !mt-2">
+          <Button className="!text-green-200 !text-3xl !p-2 !mt-2 rounded-xl">
             Start Game
           </Button>
+
+         
+
         </Dialog.Trigger>
+        
+        
 
         <Dialog.Content
           maxWidth="450px"
           className="!bg-black/80 backdrop-blur-lg border border-white/10 p-6 rounded-lg shadow-xl"
         >
+          
           <Dialog.Title className="text-green-300 text-2xl font-bold mb-4">
             Enter Your Name to Start the Game
           </Dialog.Title>
@@ -78,9 +84,14 @@ export default function Home() {
               </Dialog.Close>
               <Button onClick={handleStart} color="green">Start</Button>
             </Flex>
+            
           </div>
+          
         </Dialog.Content>
       </Dialog.Root>
+      
+      
     </main>
+    
   );
 }
