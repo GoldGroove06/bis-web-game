@@ -36,7 +36,7 @@ function Game1() {
         desc: "Which of these gold rings is real?",
         option1: q2o1,
         option2: q2o2,
-        correct: 1,
+        correct: 2, 
     },
     {
         desc: "Which of Chocolate is real?",
@@ -54,7 +54,7 @@ function Game1() {
         desc: "Which of these helmet is real?",
         option1: q5o1,
         option2: q5o2,
-        correct: 1,
+        correct: 2,
     },
   ];
 

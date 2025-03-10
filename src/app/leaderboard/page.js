@@ -25,16 +25,16 @@ function Leaderboard() {
     fethData();    
     }, [])
 
-  if (!loaded) return <div>Loading...</div>;
-  
+ 
+  if (loaded) {  
   return (
-    <div className="z-30 absolute bg-white/10 backdrop-blur-lg border border-green-500 !p-6 rounded-lg shadow-lg w-[40rem] text-center">
+    <div className="z-30 absolute bg-white/10 backdrop-blur-lg border border-green-500 !p-6 rounded-lg shadow-lg w-[40rem] text-center h-[80%] overflow-y-auto">
       
       {/* Leaderboard Heading */}
-      <h2 className="text-green-300 text-4xl font-extrabold mb-6">🏆 Leaderboard</h2>
+      <h2 className="text-green-300 text-4xl font-extrabold mb-6 sticky">🏆 Leaderboard</h2>
   
       {/* Leaderboard List */}
-      <div className="bg-green-900/20 p-4 rounded-lg border-l-4 border-green-500 shadow-md">
+      <div className="bg-green-900/20 p-4 rounded-lg border-l-4 border-green-500 shadow-md color-black">
         {list.map((item, index) => (
           <LeaderboardCard 
             name={item.name} 
@@ -48,7 +48,9 @@ function Leaderboard() {
     </div>
     
   );
-  
+  }
+
+  return <div className="z-30 absolute bg-white/10 backdrop-blur-lg border border-green-500 !p-6 rounded-lg shadow-lg w-[40rem] text-center"> Loading...</div>;
 }
 
 export default Leaderboard;

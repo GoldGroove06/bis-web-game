@@ -27,17 +27,17 @@ export default function Home() {
   
 
   return (
-    <main className="flex flex-col items-center justify-center text-center !p-6 bg-white/10 z-30 absolute space-y-4 rounded-xl">
+    <main className="flex flex-col items-center justify-center text-center !p-6 bg-white/20 z-30 absolute space-y-4 rounded-xl">
       {/* Game Introduction */}
       <div className="shadow-lg p-8 rounded-2xl max-w-4xl text-green-400 mb-10">
   <h1 className="text-4xl font-extrabold mb-4">🏛️ Bureau of Indian Standards</h1>
-  <div className="text-lg leading-relaxed !p-2 text-green-300">
+  <div className="text-lg leading-relaxed !p-2 text-white">
     The Bureau of Indian Standards (BIS) is the National Standards Body of India, ensuring  
     quality, safety, and reliability across products and services. Established under the Ministry of Consumer Affairs,  
     BIS sets benchmarks for consumer protection, industrial growth, and global trade standards**.
   </div>
   
-  <p className="mt-4 font-semibold text-green-300">
+  <p className="mt-4 font-semibold text-white">
     Be an informed consumer—Trust the Standard, Choose BIS!
   </p>
 </div>

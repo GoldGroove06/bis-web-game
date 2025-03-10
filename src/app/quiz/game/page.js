@@ -14,8 +14,8 @@ function Game() {
   const gameData = [
     {
       question: "Q1: Which BIS mark is mandatory for electrical appliances in India?",
-      options: ["(A) ISI Mark", "(B) AGMARK", "(C) FSSAI Logo", "(D) Hallmark"],
-      correct: 0,
+      options: ["(A) Hallmark", "(B) AGMARK", "(C) FSSAI Logo", "(D) ISI Mark"],
+      correct: 3,
     },
     {
       question: "Q2: Which of the following marks certifies the purity of gold jewelry?",
@@ -34,26 +34,33 @@ function Game() {
     },
   ];
 
-  const handleFinish = () => {
-    
+  const handleFinish = async () => {
+
+  
     const postData = async () => {
-        try {
-          const name = localStorage.getItem("name");
+      try {
+        const name = localStorage.getItem("name");
+        const score = localStorage.getItem("score"); 
+  
         const res = await fetch("/api/newplayer", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ name: name, score: score }),
+          body: JSON.stringify({ name, score }), 
         });
-        const data = await res.json();
+  
+        await res.json(); 
+  
+      
+        localStorage.removeItem("score");
+        localStorage.removeItem("name");
       } catch (error) {
         console.error(error);
       }
-    }
-    postData();
-    localStorage.removeItem("score");
-    localStorage.removeItem("name");
+    };
+  
+    await postData(); 
     router.push("/leaderboard");
   };
 

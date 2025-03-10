@@ -29,7 +29,7 @@ function Tutorial({tutData, redirect}) {
             <Dialog.Content maxWidth="580px" maxHeight="" className="!bg-zinc-900 ">
               <Dialog.Title className="text-green-400">Tutorial</Dialog.Title>
         
-              <Dialog.Description size="2" mb="4" className="text-green-400">
+              <Dialog.Description size="2" mb="4" className="text-green-400 break-normal">
               {tutData[track].desc}
               </Dialog.Description>
               
