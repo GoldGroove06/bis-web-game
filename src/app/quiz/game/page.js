@@ -36,6 +36,7 @@ function Game() {
 
   const handleFinish = () => {
     localStorage.removeItem("score");
+    localStorage.removeItem("name");
     router.push("/leaderboard");
   };
 
