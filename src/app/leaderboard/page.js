@@ -1,35 +1,32 @@
+"use client";
 import LeaderboardCard from "@/components/LeaderboardCard";
 import { Heading } from "@radix-ui/themes";
+import { set } from "mongoose";
 import React from "react";
+import { useEffect, useState } from "react"
 
 function Leaderboard() {
-  const list = [
-    {
-      name: "Arsh",
-      score: 10,
-    },
-    {
-      name: "Arsh",
-      score: 10,
-    },
-    {
-      name: "Arsh",
-      score: 10,
-    },
-    {
-      name: "Arsh",
-      score: 10,
-    },
-    {
-      name: "Arsh",
-      score: 10,
-    },
-    {
-      name: "Arsh",
-      score: 10,
-    },
-  ];
+  const [list, setList] = useState([]);
+  const [loaded, setLoaded] = useState(false);
+   useEffect(  () => {
+      const fethData = async () => {
+      const res =  await fetch("/api/leaderboard",{
+        method:"GET",
+        headers:{
+          "Content-Type":"application/json"
+        }
+      })
+      const data = await res.json()
+      console.log(data)
+      setList(data)
+      setLoaded(true)
+     
+    }
+    fethData();    
+    }, [])
 
+  if (!loaded) return <div>Loading...</div>;
+  
   return (
     <div className="z-30 absolute bg-white/10 backdrop-blur-lg border border-green-500 !p-6 rounded-lg shadow-lg w-[40rem] text-center">
       
