@@ -3,11 +3,19 @@ import FakegameCards from "@/components/FakegameCards";
 import React, { useState, useRef, useEffect } from "react";
 import { IconButton } from "@radix-ui/themes";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
-import Link from "next/link";
+
 import GameScore from "@/components/GameScore";
 import q1o1 from "../../../../assets/fakegame/q1o1.jpg"
 import q1o2 from "../../../../assets/fakegame/q1o2.jpg"
-import Image from "next/image";
+import q2o1 from "../../../../assets/fakegame/q2o1.jpg"
+import q2o2 from "../../../../assets/fakegame/q2o2.jpg"
+import q3o1 from "../../../../assets/fakegame/q3o1.jpg"
+import q3o2 from "../../../../assets/fakegame/q3o2.jpg"
+import q4o1 from "../../../../assets/fakegame/q4o1.jpg"
+import q4o2 from "../../../../assets/fakegame/q4o2.jpg"
+import q5o1 from "../../../../assets/fakegame/q5o1.jpg"
+import q5o2 from "../../../../assets/fakegame/q5o2.jpg"
+
 
 function Game1() {
   const [color, setColor] = useState("");
@@ -26,26 +34,26 @@ function Game1() {
     },
     {   
         desc: "Which of these gold rings is real?",
-        option1: q1o1,
-        option2: q1o2,
+        option1: q2o1,
+        option2: q2o2,
         correct: 1,
     },
     {
         desc: "Which of Chocolate is real?",
-        option1: q1o1,
-        option2: q1o2,
+        option1: q3o1,
+        option2: q3o2,
         correct: 1,
     },
     {
         desc: "Which of these Phones is real?",
-        option1: q1o1,
-        option2: q1o2,
+        option1: q4o1,
+        option2: q4o2,
         correct: 1,
     },
     {
-        desc: "Which of these pressure cookers is real?",
-        option1: q1o1,
-        option2: q1o2,
+        desc: "Which of these helmet is real?",
+        option1: q5o1,
+        option2: q5o2,
         correct: 1,
     },
   ];

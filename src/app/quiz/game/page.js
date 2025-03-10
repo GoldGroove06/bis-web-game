@@ -35,6 +35,23 @@ function Game() {
   ];
 
   const handleFinish = () => {
+    
+    const postData = async () => {
+        try {
+          const name = localStorage.getItem("name");
+        const res = await fetch("/api/newplayer", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ name: name, score: score }),
+        });
+        const data = await res.json();
+      } catch (error) {
+        console.error(error);
+      }
+    }
+    postData();
     localStorage.removeItem("score");
     localStorage.removeItem("name");
     router.push("/leaderboard");
