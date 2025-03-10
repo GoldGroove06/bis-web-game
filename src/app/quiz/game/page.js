@@ -71,7 +71,7 @@ function Game() {
     if (index === gameData[track].correct) {
       setScore((prev) => prev + 5);
     } else {
-      setScore((prev) => prev - 3);
+      setScore((prev) => prev - 1);
     }
     setNextBtn(true);
   };

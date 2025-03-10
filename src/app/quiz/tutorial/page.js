@@ -25,11 +25,11 @@ function Tutorial2() {
           img: missads,
         },
         {
-          content: `2. How to Spot Fake Products?\n\n- What to do if you get scammed\n- How to use consumer rights to your advantage`,
+          content: `2. How to Spot Fake Products?\n\n• What to do if you get scammed\n• How to use consumer rights to your\n advantage`,
           img: realfake,
         },
         {
-          content: `3. What to Do If You Get Scammed?\n\nIf you receive a fake or defective product:\n\n1️⃣ Ask for a refund or replacement from the seller\n2️⃣ File a complaint on the National Consumer Helpline (NCH) website\n3️⃣ Report counterfeit products to BIS / FSSAI / relevant authorities\n4️⃣ Spread awareness to help others avoid scams`,
+          content: `3. What to Do If You Get Scammed?\n\nIf you receive a fake or defective product:\n\n• Ask for a refund or replacement from\n the seller\n• File a complaint on the National Consumer \n Helpline (NCH) website\n• Report counterfeit products to \nBIS / FSSAI / relevant authorities\n`,
           img: compform,
         }
         

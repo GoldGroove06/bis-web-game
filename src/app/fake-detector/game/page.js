@@ -27,7 +27,7 @@ function Game1() {
   const radioRef = useRef(null);
   const gameData = [
     {   
-      desc: "Which of these pressure cookers is real?",
+      desc: "Which of these Cements is real?",
       option1: q1o1,
       option2: q1o2,
       correct: 1,
@@ -74,7 +74,7 @@ function Game1() {
     if (value != gameData[track].correct) {
       setColor("red");
       const curScore = score;
-      setScore(curScore - 3);
+      setScore(curScore - 1);
     }
 
     setNextBtn(true);
@@ -99,8 +99,8 @@ function Game1() {
       <div className="text-center mb-6">
         <h2 className="text-green-300 text-4xl font-extrabold mb-4">🕵️‍♂️ Time to Put Your Skills to the Test!</h2>
         <p className="text-white text-lg px-6 leading-relaxed">
-          You have learned how to spot fake products—now it's time to **prove your expertise**!  
-          Carefully analyze the images and **select the real product**.  
+          You have learned how to spot fake products—now it's time to <b>prove your expertise</b>!  
+          Carefully analyze the images and <b>select the real product</b>.  
         </p>
         <p className="text-white text-lg px-6 mt-2 leading-relaxed">
           Make the right choice and earn points. But be careful—fake products can be tricky! 🛑  
