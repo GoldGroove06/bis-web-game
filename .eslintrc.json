@@ -15,6 +15,7 @@
     "react/react-in-jsx-scope": "off", 
     "react/jsx-uses-react": "off",
     "react/prop-types": "off",
+    "react/no-unescaped-entities": "off",
     "jsx-a11y/anchor-is-valid": "off",
     "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }]
   }
