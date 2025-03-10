@@ -32,6 +32,39 @@ function Game() {
       ],
       correct: 0,
     },
+    
+    {
+      question: "Q4: What is the maximum time limit to file a complaint in a consumer court for a defective product?",
+      options: [
+        "(A) 5 years from the date of purchase",
+        "(B) 6 months from the date of purchase.",
+        "(C) 2 years from the date of purchase.",
+        "(D) No time limit.",
+      ],
+      correct: 2,
+    },
+    
+    {
+      question: "Q5: Which website can consumers use to verify the authenticity of ISI-marked products?",
+      options: [
+        "(A) Amazon or Flipkart Product Page.",
+        "(B) BIS Official Website",
+        "(C) Social Media Reviews.",
+        "(D) Local Newspaper Advertisements",
+      ],
+      correct: 1,
+    },
+    
+    {
+      question: "Q6: A website is selling branded smartphones at a 70% discount with no return policy. The website looks professional but has no customer service contact details. What should you do before buying?",
+      options: [
+        "(A) Contact the seller via WhatsApp and ask if it’s real.",
+        "(B) Ignore warnings from others and take the risk.",
+        "(C) Verify the seller’s legitimacy and check for reviews on trusted platforms.",
+        "(D) Quickly buy before the deal expires.",
+      ],
+      correct: 2,
+    }
   ];
 
   const handleFinish = async () => {
