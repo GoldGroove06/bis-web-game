@@ -3,8 +3,8 @@ import { Card,Box,Text, Flex } from "@radix-ui/themes";
 
 function LeaderboardCard({name, score}) {
 	return (
-		<Card className="bg-green-500 text-white flex justify-between items-center p-4 rounded-xl shadow-lg border-2 border-green-700 gap-4" >
-		  <Flex gap="4" align="center" className="w-full !m-4">
+		<Card className="bg-green-500 text-white flex justify-between items-center p-4 rounded-xl shadow-lg border-2 border-green-700" >
+		  <Flex gap="4" align="center" className="w-full ">
 			{/* Profile Icon or Medal for Ranking */}
 			<div className="bg-green-700 text-white p-2 rounded-full flex items-center justify-center w-10 h-10 text-lg font-bold">
 			  🏆
