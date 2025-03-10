@@ -37,7 +37,7 @@ function Tutorial2() {
       ];
       
       return (
-        <div className="z-30 absolute bg-white/10 backdrop-blur-lg border border-white/20 w-96 text-center p-6 rounded-2xl shadow-lg">
+        <div className="z-30 absolute bg-white/10 backdrop-blur-lg border border-white/20 w-96 text-center !p-6 rounded-2xl shadow-lg">
           <h2 className="font-bold text-3xl text-green-300 mb-4">Welcome to the Adventure!</h2>
           
           <p className="text-white text-sm mb-4">

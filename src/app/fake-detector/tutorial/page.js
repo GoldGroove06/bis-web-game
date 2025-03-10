@@ -12,7 +12,7 @@ function Tutorial1() {
 
   const tutData = [
     {
-      desc: "1️. BIS Certification Marks (ISI, Hallmark, FSSAI, etc.)",
+      desc: " 1️. BIS Certification Marks (ISI, Hallmark, FSSAI, etc.)",
       content: `✅ Real: Has an authentic ISI, Hallmark, or FSSAI logo with proper details.\n❌ Fake: No certification mark OR a poorly printed / fake logo.`,
       img: tut,
     },
@@ -42,7 +42,7 @@ function Tutorial1() {
   
 
   return (
-    <div className="p-6 m-4 z-30 absolute w-[50rem] h-auto items-center bg-white/10 backdrop-blur-lg border-4 border-green-800 rounded-2xl shadow-xl">
+    <div className="!p-6 m-4 !mt-6 z-30 absolute w-[50rem] h-auto items-center bg-white/10 backdrop-blur-lg border-4 border-green-800 rounded-2xl shadow-xl">
       <h2 className="text-green-300 text-4xl font-extrabold text-center mb-6">🛍️ Spot the Fake! A Quick Guide</h2>
   
       <p className="text-white text-lg text-center px-6 mb-4 leading-relaxed">

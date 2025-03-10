@@ -85,7 +85,7 @@ function Game1() {
   };
   console.log(track, gameData.length - 1);
   return (
-    <div className="absolute z-30 w-[64rem] bg-white/10 backdrop-blur-lg border-b border-white/10 !p-6 text-green-300 text-xl font-semibold rounded-lg shadow-lg">
+    <div className="absolute !mt-6 z-30 w-[64rem] bg-white/10 backdrop-blur-lg border-b border-white/10 !px-6 !pt-6 !pb-2 text-green-300 text-xl font-semibold rounded-lg shadow-lg">
       
       {/* Game Introduction Section */}
       <div className="text-center mb-6">
@@ -116,6 +116,7 @@ function Game1() {
       />
   
       {/* Next Button or Game Score Display */}
+      
       {nextBtn &&
         (track === gameData.length - 1 ? (
           <div className="flex justify-center mt-6 ">
@@ -129,7 +130,8 @@ function Game1() {
           </div>
         ))
       }
-    </div>
+      </div>
+    
   );
   
 }

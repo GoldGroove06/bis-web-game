@@ -8,7 +8,7 @@ function FakegameCards({ data, color, handleClick, selectedValue, radioRef }) {
 
     {data.desc}
     <RadioCards.Root
-      size="3"
+      size="2"
       color={color}
       onClick={(e) => handleClick(e)}
       ref={radioRef}
@@ -20,6 +20,8 @@ function FakegameCards({ data, color, handleClick, selectedValue, radioRef }) {
         <Image
         src={data.option1}
         alt="option1"
+        
+        height={210}
 
         />
       </RadioCards.Item>
@@ -30,6 +32,10 @@ function FakegameCards({ data, color, handleClick, selectedValue, radioRef }) {
         <Image
         src={data.option2}
         alt="option2"
+
+        height={210}
+        
+      
 
         />
       </RadioCards.Item>

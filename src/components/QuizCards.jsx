@@ -9,6 +9,7 @@ function QuizCards({ data, color, handleClick, selectedValue, radioRef }) {
       <RadioCards.Root
         size="3"
         color={color}
+        className="bg-[--var(--blue-9)]"
         onClick={(e) => handleClick(e)}
         ref={radioRef}
       >

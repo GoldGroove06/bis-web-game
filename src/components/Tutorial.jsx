@@ -25,10 +25,11 @@ function Tutorial({tutData, redirect}) {
             <Dialog.Trigger>
               <Button >Start Tutorial</Button>
             </Dialog.Trigger>
-  
-            <Dialog.Content maxWidth="550px" className="!bg-zinc-900">
+            <div className="flex items-center justify-center">
+            <Dialog.Content maxWidth="580px" maxHeight="" className="!bg-zinc-900 ">
               <Dialog.Title className="text-green-400">Tutorial</Dialog.Title>
-              <Dialog.Description size="2" mb="4" className="text-white">
+        
+              <Dialog.Description size="2" mb="4" className="text-green-400">
               {tutData[track].desc}
               </Dialog.Description>
               
@@ -37,26 +38,27 @@ function Tutorial({tutData, redirect}) {
                 content={tutData[track].content}
                 imgsrc={tutData[track].img}
               />
-              {track !== 0  ?
-              <IconButton radius="full" onClick={handlePrev}>
-                  
-                      <ArrowLeftIcon />
-               
-              </IconButton> : ""
-                  }       
-              
-              {track !== tutData.length - 1  ? 
-              <IconButton radius="full" onClick={handleNext}>
-                
-                      <ArrowRightIcon />
-                
-              </IconButton> :
-                  <Link href={redirect}>
-                  <Button color="green"> Tutorial Complete </Button>
-                </Link>
-              }
+             <div className="flex justify-between items-center mt-4">
+  {track !== 0 && (
+    <IconButton radius="full" onClick={handlePrev} className="">
+      <ArrowLeftIcon />
+    </IconButton>
+  )}
+
+  {track !== tutData.length - 1 ? (
+    <IconButton radius="full" onClick={handleNext}>
+      <ArrowRightIcon />
+    </IconButton>
+  ) : (
+    <Link href={redirect}>
+      <Button color="green" className="!p-2">Tutorial Complete</Button>
+    </Link>
+  )}
+</div>
+
               
             </Dialog.Content>
+            </div>
           </Dialog.Root>
         </div>
         <div>
