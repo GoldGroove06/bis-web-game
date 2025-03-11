@@ -24,6 +24,7 @@ function Game1() {
   const [key, setKey] = useState(0);
   const [score, setScore] = useState(0);
   const [nextBtn, setNextBtn] = useState(false);
+
   const radioRef = useRef(null);
   const gameData = [
     {   
@@ -65,7 +66,7 @@ function Game1() {
   const handleClick = (e) => {
     const value = e.target.value;
     setSelectedValue(value);
-
+    if (!nextBtn) {
     if (value == gameData[track].correct) {
       setColor("green");
       const curScore = score;
@@ -76,7 +77,7 @@ function Game1() {
       const curScore = score;
       setScore(curScore - 1);
     }
-
+    }
     setNextBtn(true);
   };
 
